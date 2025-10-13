@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/blog.css">
+    <title>Blog | TAT.Voyages</title>
+</head>
+
+<body>
+    <nav>
+        <div class="nav__header">
+            <div class="nav__logo">
+                <a href="index.html">TAT.<span>Voyages</span></a>
+            </div>
+            <div class="nav__menu__btn" id="menu-btn">
+                <span><i class="ri-menu-line"></i></span>
+            </div>
+        </div>
+        <ul class="nav__links" id="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html" class="active">Blog</a></li>
+            <li><a href="apropos.html">À propos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="blog-hero">
+        <div class="section__container">
+            <div class="blog-hero__content">
+                <h1>Notre <span>Blog</span> Voyage</h1>
+                <p>Découvrez nos conseils, récits d'aventures et inspirations pour préparer vos prochains voyages</p>
+                <div class="search-box">
+                    <div class="input__group">
+                        <span><i class="ri-search-line"></i></span>
+                        <input type="text" id="search-blog" placeholder="Rechercher un article...">
+                    </div>
+                    <button class="search-btn" onclick="performSearch()">Rechercher</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog-categories">
+        <div class="section__container">
+            <div class="categories__grid">
+                <div class="category__card active" data-category="all">
+                    <div class="category__icon">
+                        <i class="ri-article-line"></i>
+                    </div>
+                    <h3>Tous les articles</h3>
+                </div>
+                <div class="category__card" data-category="conseils">
+                    <div class="category__icon">
+                        <i class="ri-lightbulb-line"></i>
+                    </div>
+                    <h3>Conseils</h3>
+                </div>
+                <div class="category__card" data-category="aventures">
+                    <div class="category__icon">
+                        <i class="ri-map-pin-line"></i>
+                    </div>
+                    <h3>Récits</h3>
+                </div>
+                <div class="category__card" data-category="guides">
+                    <div class="category__icon">
+                        <i class="ri-guide-line"></i>
+                    </div>
+                    <h3>Guides</h3>
+                </div>
+                <div class="category__card" data-category="inspiration">
+                    <div class="category__icon">
+                        <i class="ri-compass-3-line"></i>
+                    </div>
+                    <h3>Inspiration</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog-grid">
+        <div class="section__container">
+            <div class="section__header">
+                <h2>Derniers <span>Articles</span></h2>
+                <p>Plongez dans nos récits de voyage et découvrez nos meilleurs conseils</p>
+            </div>
+
+            <div class="blog-container" id="blog-container">
+                <!-- Les articles seront chargés ici dynamiquement -->
+            </div>
+
+            <div class="pagination-container">
+                <div class="pagination-info">
+                    Affichage <span id="start-item">1</span>-<span id="end-item">6</span> sur <span
+                        id="total-items">0</span> articles
+                </div>
+                <ul class="pagination">
+                    <li><a href="#" class="pagination-arrow prev" onclick="changePage(currentPage - 1)">‹</a></li>
+                    <div id="pagination-numbers" class="pagination-numbers"></div>
+                    <li><a href="#" class="pagination-arrow next" onclick="changePage(currentPage + 1)">›</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <div class="section__container">
+            <div class="newsletter__content">
+                <h2>Ne manquez pas nos <span>nouveaux articles</span></h2>
+                <p>Inscrivez-vous à notre newsletter pour recevoir nos derniers conseils voyage en avant-première.</p>
+                <form class="newsletter__form">
+                    <div class="newsletter__input">
+                        <input type="email" placeholder="Votre adresse email" required>
+                        <button type="submit">S'abonner</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="section__container">
+            <div class="footer__grid">
+                <div class="footer__col">
+                    <div class="footer__logo">
+                        <a href="#">TAT.<span>Voyages</span></a>
+                    </div>
+                    <p>Votre partenaire de confiance pour des voyages inoubliables à travers le monde. Nous nous
+                        engageons à vous
+                        offrir des expériences uniques et personnalisées.</p>
+                    <div class="footer__socials">
+                        <a href="#"><i class="ri-facebook-fill"></i></a>
+                        <a href="#"><i class="ri-instagram-line"></i></a>
+                        <a href="#"><i class="ri-twitter-fill"></i></a>
+                        <a href="#"><i class="ri-linkedin-fill"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer__col">
+                    <h3>Liens rapides</h3>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="apropos.html">À propos</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Vols</a></li>
+                        <li><a href="#">Hôtels</a></li>
+                        <li><a href="#">Location de voiture</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__col">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><i class="ri-map-pin-line"></i> Cocody Angré, Djorobité 1</li>
+                        <li><i class="ri-phone-line"></i> +225 07 2000 68 68</li>
+                        <li><i class="ri-mail-line"></i> tatvoyages@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p>&copy; 2024 TAT.Voyages. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/blog-db.js"></script>
+    <script src="js/blog.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

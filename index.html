@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>TAT voyages | Agences de voyage</title>
+</head>
+
+<body>
+  <nav>
+    <div class="nav__header">
+      <div class="nav__logo">
+        <a href="index.html">TAT.<span>Voyages</span></a>
+      </div>
+      <div class="nav__menu__btn" id="menu-btn">
+        <span><i class="ri-menu-line"></i></span>
+      </div>
+    </div>
+    <ul class="nav__links" id="nav-links">
+      <li><a href="index.html" class="active">Accueil</a></li>
+      <li><a href="destinations.html">Destinations</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="apropos.html">À propos</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+  </nav>
+  <header class="header__container">
+    <div class="header__image">
+      <div class="header__image__card header__image__card-2">
+        <span><i class="ri-passport-line"></i></span>
+        Billets d’avion
+      </div>
+      <div class="header__image__card header__image__card-3">
+        <span><i class="ri-key-line"></i></span>
+        Réservation d’hôtels
+      </div>
+      <div class="header__image__card header__image__card-4">
+        <span><i class="ri-car-line"></i></span>
+        Location de voitures
+      </div>
+      <img src="assets/plane.png" alt="header" />
+    </div>
+    <div class="header__content">
+      <h1>TAT VOYAGES <br />VOTRE <span>PARTENAIRE DE CONFIANCE</span></h1>
+      <p>
+        TAT Voyages vous accompagne dans tous vos déplacements. Profitez des
+        meilleurs tarifs pour vos billets d’avion, réservez vos hôtels en toute
+        simplicité et louez un véhicule selon vos besoins, où que vous soyez.
+      </p>
+      <div class="header__actions">
+        <button class="btn primary__btn">
+          <i class="ri-flight-takeoff-line"></i> Réserver un vol
+        </button>
+        <button class="btn secondary__btn">
+          <i class="ri-hotel-line"></i> Trouver un hôtel
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Section Destinations Populaires -->
+  <section class="destinations">
+    <div class="section__container">
+      <div class="section__header">
+        <h2>Destinations <span>Populaires</span></h2>
+        <p>Découvrez nos destinations les plus demandées au départ d’Abidjan. TAT Voyages vous accompagne pour vos vols,
+          séjours et réservations d’hôtels au meilleur prix.</p>
+      </div>
+
+      <div class="destinations__grid">
+        <!-- Paris -->
+        <div class="destination__card">
+          <div class="destination__image">
+            <img
+              src="https://images.unsplash.com/photo-1539037116277-4db20889f2d4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
+              alt="Paris, France">
+            <div class="destination__price">À partir de 690 000 FCFA</div>
+          </div>
+          <div class="destination__content">
+            <h3>Paris, France</h3>
+            <p>Vivez la magie de Paris, la ville lumière. Entre musées, gastronomie et balades romantiques, profitez
+              d’un séjour inoubliable.</p>
+            <div class="destination__info">
+              <span><i class="ri-star-fill"></i> 4.8</span>
+              <span><i class="ri-time-line"></i> 5 jours</span>
+            </div>
+            <button class="btn destination__btn">Voir l’offre</button>
+          </div>
+        </div>
+
+        <!-- Dakar -->
+        <div class="destination__card">
+          <div class="destination__image">
+            <img src="assets/dakar1.jpg" alt="Dakar, Sénégal">
+            <div class="destination__price">À partir de 280 000 FCFA</div>
+          </div>
+          <div class="destination__content">
+            <h3>Dakar, Sénégal</h3>
+            <p>Découvrez la chaleur et la culture sénégalaise entre mer, musique et cuisine locale. Une destination
+              africaine pleine d’énergie !</p>
+            <div class="destination__info">
+              <span><i class="ri-star-fill"></i> 4.7</span>
+              <span><i class="ri-time-line"></i> 4 jours</span>
+            </div>
+            <button class="btn destination__btn">Voir l’offre</button>
+          </div>
+        </div>
+
+        <!-- Dubaï -->
+        <div class="destination__card">
+          <div class="destination__image">
+            <img src="assets/Dubai1.jpg" alt="Dubaï, Émirats Arabes Unis">
+            <div class="destination__price">À partir de 520 000 FCFA</div>
+          </div>
+          <div class="destination__content">
+            <h3>Dubaï, Émirats Arabes Unis</h3>
+            <p>Entre luxe, shopping, désert et gratte-ciel, Dubaï vous offre un séjour moderne et spectaculaire, à la
+              croisée du monde arabe et de l’Occident.</p>
+            <div class="destination__info">
+              <span><i class="ri-star-fill"></i> 4.9</span>
+              <span><i class="ri-time-line"></i> 6 jours</span>
+            </div>
+            <button class="btn destination__btn">Voir l’offre</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Section Services -->
+  <section class="services">
+    <div class="section__container">
+      <div class="section__header">
+        <h2>Nos <span>Services</span></h2>
+        <p>Avec TAT Voyages, bénéficiez d’un service fiable et rapide grâce à notre expertise et à nos partenariats avec
+          les meilleures compagnies aériennes.</p>
+      </div>
+      <div class="services__grid">
+        <div class="service__card">
+          <div class="service__icon">
+            <i class="ri-hotel-line"></i>
+          </div>
+          <h3>Réservation d'hôtels</h3>
+          <p>Choisissez parmi une sélection d'hôtels soigneusement évalués pour garantir votre confort.</p>
+           <a href="services.html#hotels" class="service__link">Détails <i class="ri-arrow-right-line"></i></a>
+        </div>
+
+        <div class="service__card">
+          <div class="service__icon">
+            <i class="ri-flight-takeoff-line"></i>
+          </div>
+          <h3>Billets d'avion</h3>
+          <p>Obtenez les meilleurs tarifs sur les vols nationaux et internationaux avec notre comparateur.</p>
+           <a href="services.html#vols" class="service__link">Détails <i class="ri-arrow-right-line"></i></a>
+        </div>
+
+        <div class="service__card">
+          <div class="service__icon">
+            <i class="ri-car-line"></i>
+          </div>
+          <h3>Location de voiture</h3>
+          <p>Louez le véhicule adapté à vos besoins où que vous soyez dans le monde.</p>
+          <a href="services.html#voitures" class="service__link">Détails <i class="ri-arrow-right-line"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Témoignages -->
+  <!-- Section Témoignages -->
+  <section class="testimonials">
+    <div class="section__container">
+      <div class="section__header">
+        <h2>Témoignages <span>Clients</span></h2>
+        <p>Découvrez ce que nos voyageurs ivoiriens disent de leur expérience avec TAT Voyages.</p>
+      </div>
+
+      <div class="testimonials__grid">
+        <!-- Témoignage 1 -->
+        <div class="testimonial__card">
+          <div class="testimonial__content">
+            <p>"Mon séjour à Paris avec TAT Voyages a été exceptionnel ! Tout était bien organisé, de l’avion à l’hôtel.
+              Je recommande vivement !" </p>
+          </div>
+          <div class="testimonial__author">
+            <div class="author__image">
+              <img src="assets/temoignage1.jpg" alt="Amada Koné">
+            </div>
+            <div class="author__info">
+              <h4>Adama Koné</h4>
+              <span>Séjour à Paris</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Témoignage 2 -->
+        <div class="testimonial__card">
+          <div class="testimonial__content">
+            <p>"Nous avons loué une voiture pour notre road trip au Sénégal via TAT Voyages. Le service était rapide et
+              efficace, et le personnel très disponible !" </p>
+          </div>
+          <div class="testimonial__author">
+            <div class="author__image">
+             <img src="assets/temoignage2.jpg" alt="Yao Kouadio">
+            </div>
+            <div class="author__info">
+              <h4>Yao Kouadio</h4>
+              <span>Location de voiture</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Témoignage 3 -->
+        <div class="testimonial__card">
+          <div class="testimonial__content">
+            <p>"J’ai réservé mon hôtel à Dubaï avec TAT Voyages. Tout était conforme à mes attentes et le suivi était
+              impeccable. Je ferai de nouveau appel à eux !" </p>
+          </div>
+          <div class="testimonial__author">
+            <div class="author__image">
+              <img src="assets/temoignge3.jpg" alt="Fatoumata Sangaré">
+            </div>
+            <div class="author__info">
+              <h4>Fatoumata Sangaré</h4>
+              <span>Hôtel à Dubaï</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Section Newsletter -->
+  <section class="newsletter">
+    <div class="section__container">
+      <div class="newsletter__content">
+        <h2>Ne manquez pas nos <span>offres exclusives</span></h2>
+        <p>Inscrivez-vous à notre newsletter pour recevoir en avant-première nos promotions et inspirations voyage.</p>
+        <form class="newsletter__form">
+          <div class="newsletter__input">
+            <input type="email" placeholder="Votre adresse email" required>
+            <button type="submit">S'abonner</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="section__container">
+      <div class="footer__grid">
+        <div class="footer__col">
+          <div class="footer__logo">
+            <a href="#">TAT.<span>Voyages</span></a>
+          </div>
+          <p>Votre partenaire de confiance pour des voyages inoubliables à travers le monde. Nous nous engageons à vous
+            offrir des expériences uniques et personnalisées.</p>
+          <div class="footer__socials">
+            <a href="#"><i class="ri-facebook-fill"></i></a>
+            <a href="#"><i class="ri-instagram-line"></i></a>
+            <a href="#"><i class="ri-twitter-fill"></i></a>
+            <a href="#"><i class="ri-linkedin-fill"></i></a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h3>Liens rapides</h3>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="apropos.html">À propos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="#">Vols</a></li>
+            <li><a href="#">Hôtels</a></li>
+            <li><a href="#">Location de voiture</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h3>Contact</h3>
+          <ul>
+            <li><i class="ri-map-pin-line"></i> Cocody Angré, Djorobité 1</li>
+            <li><i class="ri-phone-line"></i> +225 07 2000 68 68</li>
+            <li><i class="ri-mail-line"></i> tatvoyages@gmail.com</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; 2024 TAT.Voyages. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

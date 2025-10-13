@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/contact.css" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Contact | TAT.Voyages</title>
+</head>
+<body>
+   <nav>
+    <div class="nav__header">
+      <div class="nav__logo">
+        <a href="index.html">TAT.<span>Voyages</span></a>
+      </div>
+      <div class="nav__menu__btn" id="menu-btn">
+        <span><i class="ri-menu-line"></i></span>
+      </div>
+    </div>
+    <ul class="nav__links" id="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="destinations.html">Destinations</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="apropos.html">À propos</a></li>
+      <li><a href="contact.html"  class="active">Contact</a></li>
+    </ul>
+  </nav>
+
+    <section class="contact-hero">
+        <div class="section__container">
+            <div class="contact-hero__content">
+                <h1>Contactez-<span>Nous</span></h1>
+                <p>Notre équipe d'experts voyage est à votre écoute pour concrétiser vos projets et répondre à toutes vos questions.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-main">
+        <div class="section__container">
+            <div class="contact-grid">
+                <!-- Informations de contact -->
+                <div class="contact-info">
+                    <h2>Prenez <span>Contact</span></h2>
+                    <p class="contact-description">
+                        Que vous ayez une question sur une destination, besoin d'un devis personnalisé ou simplement envie de discuter de votre prochain voyage, nous sommes là pour vous.
+                    </p>
+
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="ri-phone-line"></i>
+                            </div>
+                            <div class="method-content">
+                                <h3>Téléphone</h3>
+                                <p> +225 07 2000 68 68</p>
+                                <span>Lun-Ven: 9h-17h • Sam: 10h-17h</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="ri-mail-line"></i>
+                            </div>
+                            <div class="method-content">
+                                <h3>Email</h3>
+                                <p>tatvoyages@gmail.com</p>
+                                <span>Réponse sous 24h</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="ri-map-pin-line"></i>
+                            </div>
+                            <div class="method-content">
+                                <h3>Agence</h3>
+                                <p>Cocody Angré,<br>Djorobité 1</p>
+                                <span>Sur rendez-vous</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="ri-whatsapp-line"></i>
+                            </div>
+                            <div class="method-content">
+                                <h3>WhatsApp</h3>
+                                <p>+225 07 2000 68 68</p>
+                                <span>7j/7 de 8h à 22h</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-contact">
+                        <h3>Suivez-nous</h3>
+                        <div class="social-links">
+                            <a href="#" class="social-link">
+                                <i class="ri-facebook-fill"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="ri-instagram-line"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="ri-linkedin-fill"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulaire de contact -->
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contactForm">
+                        <h2>Envoyez-nous un <span>Message</span></h2>
+                        
+                        <div class="form-group">
+                            <label for="name">Nom complet *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Téléphone</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Sujet *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Choisissez un sujet</option>
+                                <option value="reservation">Réservation</option>
+                                <option value="devis">Demande de devis</option>
+                                <option value="information">Information voyage</option>
+                                <option value="modification">Modification réservation</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="destination">Destination souhaitée</label>
+                            <input type="text" id="destination" name="destination" placeholder="Ex: Bali, Paris, New York...">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="6" placeholder="Décrivez-nous votre projet de voyage..." required></textarea>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn submit-btn">
+                                <i class="ri-send-plane-line"></i> Envoyer le message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="quick-contact">
+        <div class="section__container">
+            <h2>Contact <span>Rapide</span></h2>
+            <p>Pour une réponse immédiate, contactez-nous directement via ces canaux :</p>
+            
+            <div class="quick-buttons">
+                <a href="https://wa.me/+220720006868?text=Bonjour%20TAT.Voyages%20!%20Je%20suis%20intéressé(e)%20par%20vos%20services%20de%20voyage." 
+                   class="quick-btn whatsapp-btn" target="_blank">
+                    <i class="ri-whatsapp-fill"></i>
+                    <div>
+                        <span>WhatsApp</span>
+                        <small>Réponse immédiate</small>
+                    </div>
+                </a>
+
+                <a href="tel:+2250720006868" class="quick-btn phone-btn">
+                    <i class="ri-phone-fill"></i>
+                    <div>
+                        <span>Appeler</span>
+                        <small>+225 07 2000 68 68</small>
+                    </div>
+                </a>
+
+                <a href="mailto:tatvoyages@gmail.com" class="quick-btn email-btn">
+                    <i class="ri-mail-fill"></i>
+                    <div>
+                        <span>Email</span>
+                        <small>tatvoyages@gmail.com</small>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="map-section">
+        <div class="section__container">
+            <h2>Notre <span>Agence</span> à Abidjan</h2>
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <i class="ri-map-pin-line"></i>
+                    <h3>Cocody Angré</h3>
+                    <p>Djorobité 1</p>
+                    <div class="map-info">
+                        <div class="info-item">
+                            <i class="ri-time-line"></i>
+                            <span>Lun-Ven: 9h-17h • Sam: 10h-17h</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="ri-taxi-line"></i>
+                            <span>Référence yango: TAT</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Intégrez ici votre carte Google Maps ou autre service -->
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-contact">
+        <div class="section__container">
+            <h2>Questions <span>Fréquentes</span></h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>Quels sont vos horaires d'ouverture ?</h3>
+                    <p>Notre agence est ouverte du lundi au vendredi de 9h à 17h et le samedi de 10h à 18h. Notre service WhatsApp est disponible 7j/7 de 8h à 22h.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Comment puis-je modifier ma réservation ?</h3>
+                    <p>Contactez-nous par téléphone, email ou WhatsApp avec votre numéro de réservation. Nous nous chargeons de toutes les modifications.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Proposez-vous des voyages sur mesure ?</h3>
+                    <p>Absolument ! Nos conseillers spécialisés créent des itinéraires personnalisés selon vos envies, votre budget et vos contraintes.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Quelle est votre politique d'annulation ?</h3>
+                    <p>Elle varie selon les prestataires. Contactez-nous pour connaître les conditions spécifiques à votre réservation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+        <!-- Footer -->
+    <footer class="footer">
+        <div class="section__container">
+            <div class="footer__grid">
+                <div class="footer__col">
+                    <div class="footer__logo">
+                        <a href="#">TAT.<span>Voyages</span></a>
+                    </div>
+                    <p>Votre partenaire de confiance pour des voyages inoubliables à travers le monde. Nous nous
+                        engageons à vous
+                        offrir des expériences uniques et personnalisées.</p>
+                    <div class="footer__socials">
+                        <a href="#"><i class="ri-facebook-fill"></i></a>
+                        <a href="#"><i class="ri-instagram-line"></i></a>
+                        <a href="#"><i class="ri-twitter-fill"></i></a>
+                        <a href="#"><i class="ri-linkedin-fill"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer__col">
+                    <h3>Liens rapides</h3>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="apropos.html">À propos</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Vols</a></li>
+                        <li><a href="#">Hôtels</a></li>
+                        <li><a href="#">Location de voiture</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__col">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><i class="ri-map-pin-line"></i> Cocody Angré, Djorobité 1</li>
+                        <li><i class="ri-phone-line"></i> +225 07 2000 68 68</li>
+                        <li><i class="ri-mail-line"></i> tatvoyages@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p>&copy; 2024 TAT.Voyages. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Récupération des données du formulaire
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                subject: document.getElementById('subject').value,
+                destination: document.getElementById('destination').value,
+                message: document.getElementById('message').value
+            };
+
+            // Ici vous intégreriez l'envoi vers votre backend
+            console.log('Formulaire soumis:', formData);
+            
+            // Message de confirmation
+            alert('Merci ! Votre message a été envoyé. Nous vous répondrons dans les plus brefs délais.');
+            this.reset();
+        });
+
+        // Animation pour les boutons de contact rapide
+        document.querySelectorAll('.quick-btn').forEach(btn => {
+            btn.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+            });
+            btn.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+</html>

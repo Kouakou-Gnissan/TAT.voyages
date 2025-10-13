@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/destinations.css">
+    <title>Détails de la Destination | TAT.Voyages</title>
+</head>
+<body>
+    <nav>
+        <div class="nav__header">
+            <div class="nav__logo">
+                <a href="index.html">TAT.<span>Voyages</span></a>
+            </div>
+            <div class="nav__menu__btn" id="menu-btn">
+                <span><i class="ri-menu-line"></i></span>
+            </div>
+        </div>
+        <ul class="nav__links" id="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="destinations.html" class="active">Destinations</a></li>
+            <li><a href="forfaits.html">Forfaits</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="apropos.html">À propos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav__btns">
+            <button class="btn sign__up">S'inscrire</button>
+            <button class="btn sign__in">Se connecter</button>
+        </div>
+    </nav>
+
+    <section class="destination-detail">
+        <div class="section__container">
+            <div id="detail-content">
+                <!-- Le contenu sera chargé dynamiquement -->
+            </div>
+        </div>
+    </section>
+
+    <script src="js/destinations-db.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const destinationId = parseInt(localStorage.getItem('currentDestinationId'));
+            const destination = destinationsDB.find(d => d.id === destinationId);
+            
+            if (destination) {
+                const detailContent = document.getElementById('detail-content');
+                detailContent.innerHTML = `
+                    <div class="detail-header">
+                        <h1>${destination.title}</h1>
+                        <div class="detail-rating">
+                            <i class="ri-star-fill"></i>
+                            <span>${destination.rating}</span>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-gallery">
+                        <img src="${destination.image}" alt="${destination.title}" class="detail-main-image">
+                    </div>
+                    
+                    <div class="detail-content-grid">
+                        <div class="detail-info">
+                            <p class="detail-description">${destination.description}</p>
+                            
+                            <div class="detail-highlights">
+                                <h3>Points Forts du Séjour</h3>
+                                <ul>
+                                    ${destination.details.highlights.map(highlight => 
+                                        `<li><i class="ri-check-line"></i> ${highlight}</li>`
+                                    ).join('')}
+                                </ul>
+                            </div>
+                            
+                            <div class="detail-itinerary">
+                                <h3>Votre Itinéraire</h3>
+                                <ol>
+                                    ${destination.details.itinerary.map(day => 
+                                        `<li>${day}</li>`
+                                    ).join('')}
+                                </ol>
+                            </div>
+                        </div>
+                        
+                        <div class="booking-card">
+                            <div class="booking-price">
+                                <span class="price-from">À partir de</span>
+                                <span class="price-amount">${destination.price}€</span>
+                                <span class="price-duration">pour ${destination.duration} jours</span>
+                            </div>
+                            
+                            <div class="booking-included">
+                                <h4>Ce prix comprend :</h4>
+                                <ul>
+                                    ${destination.details.included.map(item => 
+                                        `<li><i class="ri-check-line"></i> ${item}</li>`
+                                    ).join('')}
+                                </ul>
+                            </div>
+                            
+                            <button class="btn booking-btn" style="width: 100%; margin-top: 1.5rem;">
+                                Réserver maintenant
+                            </button>
+                        </div>
+                    </div>
+                `;
+            } else {
+                detailContent.innerHTML = '<p>Destination non trouvée. <a href="destinations.html">Retour aux destinations</a></p>';
+            }
+        });
+    </script>
+</body>
+</html>

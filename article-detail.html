@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/article-detail.css">
+    <title>Article | TAT.Voyages</title>
+</head>
+<body>
+    <nav>
+        <div class="nav__header">
+            <div class="nav__logo">
+                <a href="index.html">TAT.<span>Voyages</span></a>
+            </div>
+            <div class="nav__menu__btn" id="menu-btn">
+                <span><i class="ri-menu-line"></i></span>
+            </div>
+        </div>
+    <ul class="nav__links" id="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="destinations.html">Destinations</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="blog.html"   class="active">Blog</a></li>
+      <li><a href="apropos.html">À propos</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+        <div class="nav__btns">
+            <button class="btn sign__up">S'inscrire</button>
+            <button class="btn sign__in">Se connecter</button>
+        </div>
+    </nav>
+
+    <section class="article-detail">
+        <div class="section__container">
+            <div id="article-content">
+                <!-- Le contenu sera chargé dynamiquement -->
+            </div>
+        </div>
+    </section>
+
+    <section class="related-articles">
+        <div class="section__container">
+            <h2>Articles Similaires</h2>
+            <div class="related-container" id="related-container">
+                <!-- Les articles similaires seront chargés ici -->
+            </div>
+        </div>
+    </section>
+
+    <script src="js/blog-db.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const articleId = parseInt(localStorage.getItem('currentArticleId'));
+            const article = blogDB.find(a => a.id === articleId);
+            
+            if (article) {
+                const articleContent = document.getElementById('article-content');
+                articleContent.innerHTML = `
+                    <article class="full-article">
+                        <div class="article-header">
+                            <div class="article-meta">
+                                <span class="article-category">${getCategoryLabel(article.category)}</span>
+                                <span class="article-date">${article.date}</span>
+                            </div>
+                            <h1 class="article-title">${article.title}</h1>
+                            <div class="article-author-info">
+                                <div class="author-avatar">
+                                    <i class="ri-user-line"></i>
+                                </div>
+                                <div class="author-details">
+                                    <span class="author-name">${article.author}</span>
+                                    <span class="article-read-time">${article.readTime} de lecture</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="article-hero-image">
+                            <img src="${article.image}" alt="${article.title}">
+                        </div>
+                        
+                        <div class="article-body">
+                            ${article.content}
+                        </div>
+                        
+                        <div class="article-actions">
+                            <button class="btn action-btn" onclick="shareArticle()">
+                                <i class="ri-share-line"></i> Partager
+                            </button>
+                            <button class="btn action-btn" onclick="window.location.href='blog.html'">
+                                <i class="ri-arrow-left-line"></i> Retour au blog
+                            </button>
+                        </div>
+                    </article>
+                `;
+                
+                loadRelatedArticles(article.category, article.id);
+            } else {
+                articleContent.innerHTML = '<p>Article non trouvé. <a href="blog.html">Retour au blog</a></p>';
+            }
+        });
+
+        function getCategoryLabel(category) {
+            const labels = {
+                'conseils': 'Conseils',
+                'aventures': 'Récits',
+                'guides': 'Guides',
+                'inspiration': 'Inspiration'
+            };
+            return labels[category] || category;
+        }
+
+        function loadRelatedArticles(category, currentArticleId) {
+            const relatedArticles = blogDB
+                .filter(article => article.category === category && article.id !== currentArticleId)
+                .slice(0, 3);
+            
+            const container = document.getElementById('related-container');
+            if (relatedArticles.length > 0) {
+                container.innerHTML = relatedArticles.map(article => `
+                    <div class="related-article" onclick="openArticleDetail(${article.id})">
+                        <img src="${article.image}" alt="${article.title}">
+                        <div class="related-content">
+                            <h3>${article.title}</h3>
+                            <p>${article.excerpt}</p>
+                            <span class="related-date">${article.date}</span>
+                        </div>
+                    </div>
+                `).join('');
+            } else {
+                container.innerHTML = '<p>Aucun article similaire pour le moment.</p>';
+            }
+        }
+
+        function shareArticle() {
+            if (navigator.share) {
+                navigator.share({
+                    title: document.title,
+                    url: window.location.href
+                });
+            } else {
+                navigator.clipboard.writeText(window.location.href);
+                alert('Lien copié dans le presse-papier !');
+            }
+        }
+
+        function openArticleDetail(articleId) {
+            localStorage.setItem('currentArticleId', articleId);
+            window.location.reload();
+        }
+    </script>
+</body>
+</html>

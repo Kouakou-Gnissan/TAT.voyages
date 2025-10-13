@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/destinations.css">
+    <title>Destinations | TAT.Voyages</title>
+</head>
+<body>
+    <nav>
+        <div class="nav__header">
+            <div class="nav__logo">
+                <a href="index.html">TAT.<span>Voyages</span></a>
+            </div>
+            <div class="nav__menu__btn" id="menu-btn">
+                <span><i class="ri-menu-line"></i></span>
+            </div>
+        </div>
+        <ul class="nav__links" id="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="destinations.html" class="active">Destinations</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="apropos.html">À propos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+    </nav>
+
+    <section class="destinations-hero">
+        <div class="section__container">
+            <div class="destinations-hero__content">
+                <h1>Explorez le <span>Monde</span></h1>
+                <p>Découvrez nos destinations soigneusement sélectionnées à travers le globe.</p>
+                <div class="search-box">
+                    <div class="input__group">
+                        <span><i class="ri-search-line"></i></span>
+                        <input type="text" id="search-destinations" placeholder="Rechercher une destination...">
+                    </div>
+                    <button class="btn search-btn" onclick="performSearch()">Rechercher</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="categories">
+        <div class="section__container">
+            <div class="categories__grid">
+                <div class="category__card active" data-category="all">
+                    <div class="category__icon">
+                        <i class="ri-global-line"></i>
+                    </div>
+                    <h3>Toutes</h3>
+                </div>
+                <div class="category__card" data-category="beach">
+                    <div class="category__icon">
+                        <i class="ri-sailboat-line"></i>
+                    </div>
+                    <h3>Plages</h3>
+                </div>
+                <div class="category__card" data-category="mountain">
+                    <div class="category__icon">
+                        <i class="ri-landscape-line"></i>
+                    </div>
+                    <h3>Montagnes</h3>
+                </div>
+                <div class="category__card" data-category="city">
+                    <div class="category__icon">
+                        <i class="ri-building-line"></i>
+                    </div>
+                    <h3>Villes</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="destinations-grid">
+        <div class="section__container">
+            <div class="section__header">
+                <h2>Nos <span>Destinations</span></h2>
+                <p>Parcourez notre collection exclusive de destinations</p>
+            </div>
+
+            <div class="destinations-container" id="destinations-container"></div>
+
+            <div class="pagination-container">
+                <div class="pagination-info">
+                    Affichage <span id="start-item">1</span>-<span id="end-item">6</span> sur <span id="total-items">0</span> destinations
+                </div>
+                <ul class="pagination">
+                    <li><a href="#" class="pagination-arrow prev" onclick="changePage(currentPage - 1)">‹</a></li>
+                    <div id="pagination-numbers" class="pagination-numbers"></div>
+                    <li><a href="#" class="pagination-arrow next" onclick="changePage(currentPage + 1)">›</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/destinations-db.js"></script>
+    <script src="js/destinations.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
