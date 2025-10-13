@@ -182,7 +182,7 @@ nav {
 
 .header__image__card {
   position: absolute;
-  padding: 1rem 1.25rem;
+  padding: 0.8rem 1rem;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -314,7 +314,7 @@ nav {
 }
 
 
-/* ===== MEDIA QUERIES FOR SMALLER SCREENS ===== */
+/*===== MEDIA QUERIES FOR SMALLER SCREENS ===== */
 @media (max-width: 1024px) {
   .header__container {
     gap: 6rem;
@@ -402,6 +402,7 @@ nav {
     display: none;
   }
 
+  /*
   .header__container {
     padding-block: 8rem 2rem;
     grid-template-columns: 1fr;
@@ -441,8 +442,11 @@ nav {
   .header__content button {
     width: 100%;
   }
+
+  */
 }
 
+ 
 /* ===== ACCESSIBILITY IMPROVEMENTS ===== */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
@@ -923,20 +927,21 @@ input:focus-visible {
 
 /* ===== MEDIA QUERIES POUR LES NOUVELLES SECTIONS ===== */
 @media (max-width: 768px) {
+
   .section__header h2 {
     font-size: 2.5rem;
   }
-  
+  /*
   .destinations__grid,
   .services__grid,
   .testimonials__grid {
     grid-template-columns: 1fr;
   }
-  
+  */
   .newsletter__content h2 {
     font-size: 2rem;
   }
-  
+  /*
   .newsletter__input {
     flex-direction: column;
   }
@@ -948,6 +953,7 @@ input:focus-visible {
   .footer__grid {
     gap: 2rem;
   }
+    */
 }
 
 /* Animations supplémentaires pour ScrollReveal */
