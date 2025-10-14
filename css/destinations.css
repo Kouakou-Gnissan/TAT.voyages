@@ -33,7 +33,7 @@ body {
 .section__container {
     max-width: var(--max-width);
     margin: auto;
-    padding: 4rem 1rem;
+    padding: 3rem 1rem;
 }
 
 /* ===== HERO SECTION DESTINATIONS ===== */
@@ -130,7 +130,7 @@ body {
 
 /* ===== CATÉGORIES ===== */
 .categories {
-    padding: 3rem 0;
+    padding: 1rem 0;
     background: var(--white);
 }
 
@@ -195,7 +195,7 @@ body {
 
 /* ===== GRILLE DES DESTINATIONS ===== */
 .destinations-grid {
-    padding: 5rem 0;
+    padding: 2rem 0;
     background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
 }
 

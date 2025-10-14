@@ -63,8 +63,8 @@ body {
 
 /* === HERO SERVICES === */
 .services-hero {
-    background: linear-gradient(135deg, rgba(255, 131, 62, 0.1) 0%, rgba(219, 111, 53, 0.9) 100%), 
-                url('../assets/service-hero.jpg');
+    background: linear-gradient(135deg, rgba(255, 131, 62, 0.1) 0%, rgba(219, 111, 53, 0.8) 100%), 
+                url('../assets/service-hero1.jpg');
     background-size: cover;
     background-position: center;
     padding: 8rem 0 5rem;
@@ -590,5 +590,6 @@ body {
     .benefit-item {
         flex-direction: column;
         text-align: center;
+        align-items: center;
     }
 }

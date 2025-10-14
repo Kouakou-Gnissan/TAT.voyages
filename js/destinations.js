@@ -95,7 +95,7 @@ function renderDestinations() {
                 <div class="destination-footer">
                     <div class="destination-price">
                         <span class="price-from">À partir de</span>
-                        <span class="price-amount">${destination.price}€</span>
+                        <span class="price-amount">${destination.price}FCFA</span>
                     </div>
                     <button class="btn destination-btn" onclick="openDestinationDetail(${destination.id})">
                         Voir offre
