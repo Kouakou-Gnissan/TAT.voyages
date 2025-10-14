@@ -392,7 +392,8 @@ nav {
     border-bottom: none;
   }
 
-  .nav__links a:hover {
+  .nav__links a:hover,
+  .nav__links a.active {
     color: var(--text-dark);
     background-color: var(--white);
     transform: translateY(-2px);
